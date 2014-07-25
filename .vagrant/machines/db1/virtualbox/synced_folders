@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/miurahironori/Vagrant/VagrantTreasure2014","disabled":false},"/tmp/vagrant-puppet-2/manifests":{"owner":"root","guestpath":"/tmp/vagrant-puppet-2/manifests","hostpath":"/Users/miurahironori/Vagrant/VagrantTreasure2014/puppet/manifests","disabled":false}}}
