@@ -1,4 +1,4 @@
-MySQL5.6検証用環境(master,slave)
+Treasure2014
 ===================================
 
 ## 環境構成
@@ -7,37 +7,51 @@ Puppet
 ## Set Up 
 ### git clone
 ```
-$ git clone git@github.com:hironomiu/Vagrant_MySQL5.6.git
+$ git@github.com:hironomiu-vg/VagrantTreasure2014.git 
 ```
 ### vagrant up
 ```
-$ cd Vagrant_MySQL5.6  
+$ cd VagrantTreasure2014  
 $ vagrant up  
 ```
 ## Login
-### demouser(master)
+### appuser2014
 ```
-$ ssh demouser@192.168.56.10
+$ ssh appuser2014@192.168.56.14
 ```
-### demouser(slave)
+### vagrant
 ```
-$ ssh demouser@192.168.56.20
+$ vagrant ssh
 ```
-### vagrant(master)
-```
-$ vagrant ssh db1
-```
-### vagrant(slave)
-```
-$ vagrant ssh db2
-```
+## users
+
+| OS user | pass | 続DB | 接続Port |  DB user |  DB pass | 用途 |
+|:-----------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+| root | vagrant | - | 3306 |  root | vagrant | root |
+| vagrant | vagrant | - | - | - | - | vagrant用ユーザ |
+| appuser2014 | appuser2014 | treasure2014 | 3306 | treasure2014 | treasure2014 | 開発ユーザ |
+| group-a-2014 | group-a-2014 | group_a_2014 | 3306 | group_a_2014 | group_a_2014 | グループワークユーザ |
+| group-b-2014 | group-b-2014 | group_b_2014 | 3306 | group_b_2014 | group_b_2014 | グループワークユーザ |
+| group-c-2014 | group-c-2014 | group_c_2014 | 3306 | group_c_2014 | group_c_2014 | グループワークユーザ |
+| group-d-2014 | group-d-2014 | group_d_2014 | 3306 | group_d_2014 | group_d_2014 | グループワークユーザ |
+| group-e-2014 | group-e-2014 | group_e_2014 | 3306 | group_e_2014 | group_e_2014 | グループワークユーザ |
+| group-f-2014 | group-f-2014 | group_f_2014 | 3306 | group_f_2014 | group_f_2014 | グループワークユーザ |
+
 ## Packages   
-### MySQL5.6
-自動起動
-/etc/my.cnf  
+### MySQL
+- 5.6
+- 自動起動
+```
+/etc/my.cnf
+```
+ 
 ### iptables
-自動起動
-port22,80をallow
+- 自動起動
+- port22,80 allow
+
 ### httpd
-自動起動
+- 自動起動
+- DocumentRootは適時設定すること
+
 ### PHP
+- 5.4
