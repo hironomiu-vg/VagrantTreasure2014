@@ -1,6 +1,6 @@
 class db-2014::config {
-    include variables::init
-    $passwd = $variables::init::passwd
+    include variables::config
+    $passwd = $variables::config::passwd
     include mysql::service
     Class['mysql::service'] -> Class['db-2014::config']
     exec { "db-create-demouser":

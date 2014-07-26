@@ -1,6 +1,6 @@
 class mysql::service {
-    include variables::init
-    $passwd = $variables::init::passwd
+    include variables::config
+    $passwd = $variables::config::passwd
     service{ 'mysql':
         enable => true,
         ensure => running,

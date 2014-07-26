@@ -1,3 +1,3 @@
-class variables::init {
-    $passwd = 'vagrant'
+class variables{
+    include variables::config
 }
