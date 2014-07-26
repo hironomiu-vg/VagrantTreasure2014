@@ -9,11 +9,28 @@ Puppet
 ```
 $ git@github.com:hironomiu-vg/VagrantTreasure2014.git 
 ```
-### vagrant up
+### 起動
+- pluginの確認しvagrant-vbguestがinstallされていること
+
+```
+$ vagrant plugin list
+vagrant-login (1.0.1, system)
+vagrant-share (1.1.0, system)
+vagrant-vbguest (0.10.0)
+```
+- pluginが存在しない場合installを行う
+
+```
+$ vagrant plugin install vagrant-vbguest
+```
+
+-起動
+
 ```
 $ cd VagrantTreasure2014  
 $ vagrant up  
 ```
+
 ## Login
 ### appuser2014
 ```
