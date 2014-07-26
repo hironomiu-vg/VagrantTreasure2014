@@ -10,7 +10,7 @@ Puppet
 $ git@github.com:hironomiu-vg/VagrantTreasure2014.git 
 ```
 ### 起動
-- pluginの確認しvagrant-vbguestがinstallされていること
+- エラーとなる場合pluginを確認しvagrant-vbguestがinstallされていること
 
 ```
 $ vagrant plugin list
@@ -44,8 +44,8 @@ $ vagrant ssh
 
 | OS user | pass | 続DB | 接続Port |  DB user |  DB pass | 用途 |
 |:-----------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
-| root | vagrant | - | 3306 |  root | vagrant | root |
-| vagrant | vagrant | - | - | - | - | vagrant用ユーザ |
+| root | - | - | 3306 |  root | vagrant | root vagrantユーザより sudo su -にて遷移|
+| vagrant | - | - | - | - | - | vagrant用ユーザ vagrant sshにてログイン|
 | appuser2014 | appuser2014 | treasure2014 | 3306 | treasure2014 | treasure2014 | 開発ユーザ |
 | group-a-2014 | group-a-2014 | group_a_2014 | 3306 | group_a_2014 | group_a_2014 | グループワークユーザ |
 | group-b-2014 | group-b-2014 | group_b_2014 | 3306 | group_b_2014 | group_b_2014 | グループワークユーザ |
