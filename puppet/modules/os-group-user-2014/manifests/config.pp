@@ -31,6 +31,14 @@ class os-group-user-2014::config{
         require => User["appuser2014"]
     }
 
+    exec { "appuser2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/appuser2014",
+        timeout => 999,
+        require => User["appuser2014"]
+    }
+
     user { 'group-a-2014':
         ensure => present,
         gid => 'treasure2014',
@@ -40,6 +48,14 @@ class os-group-user-2014::config{
         managehome => true,
         shell => '/bin/bash',
         require => File['/home/treasure2014'],
+    }
+
+    exec { "group-a-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-a-2014",
+        timeout => 999,
+        require => User["group-a-2014"]
     }
 
     user { 'group-b-2014':
@@ -53,6 +69,14 @@ class os-group-user-2014::config{
         require => File['/home/treasure2014'],
     }
 
+    exec { "group-b-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-b-2014",
+        timeout => 999,
+        require => User["group-b-2014"]
+    }
+
     user { 'group-c-2014':
         ensure => present,
         gid => 'treasure2014',
@@ -62,6 +86,14 @@ class os-group-user-2014::config{
         managehome => true,
         shell => '/bin/bash',
         require => File['/home/treasure2014'],
+    }
+
+    exec { "group-c-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-c-2014",
+        timeout => 999,
+        require => User["group-c-2014"]
     }
 
     user { 'group-d-2014':
@@ -75,6 +107,14 @@ class os-group-user-2014::config{
         require => File['/home/treasure2014'],
     }
 
+    exec { "group-d-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-d-2014",
+        timeout => 999,
+        require => User["group-d-2014"]
+    }
+
     user { 'group-e-2014':
         ensure => present,
         gid => 'treasure2014',
@@ -86,6 +126,14 @@ class os-group-user-2014::config{
         require => File['/home/treasure2014'],
     }
 
+    exec { "group-e-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-e-2014",
+        timeout => 999,
+        require => User["group-e-2014"]
+    }
+
     user { 'group-f-2014':
         ensure => present,
         gid => 'treasure2014',
@@ -95,6 +143,14 @@ class os-group-user-2014::config{
         managehome => true,
         shell => '/bin/bash',
         require => File['/home/treasure2014'],
+    }
+
+    exec { "group-f-2014 chmod" :
+        user => 'root',
+        path => ['/bin'],
+        command => "chmod 755 /home/treasure2014/group-f-2014",
+        timeout => 999,
+        require => User["group-f-2014"]
     }
 
 }
