@@ -32,9 +32,9 @@ $ vagrant up
 ```
 
 ## Login
-### appuser2014
+### treasure2014
 ```
-$ ssh appuser2014@192.168.56.14
+$ ssh treasure2014@192.168.56.14
 ```
 ### vagrant
 ```
@@ -46,7 +46,7 @@ $ vagrant ssh
 |:-----------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 | root | - | - | 3306 |  root | vagrant | root vagrantユーザより sudo su -にて遷移|
 | vagrant | - | - | - | - | - | vagrant用ユーザ vagrant sshにてログイン|
-| appuser2014 | appuser2014 | treasure2014 | 3306 | treasure2014 | treasure2014 | 開発ユーザ |
+| treasure2014 | treasure2014 | treasure2014 | 3306 | treasure2014 | treasure2014 | 開発ユーザ |
 | group-a-2014 | group-a-2014 | group_a_2014 | 3306 | group_a_2014 | group_a_2014 | グループワークユーザ |
 | group-b-2014 | group-b-2014 | group_b_2014 | 3306 | group_b_2014 | group_b_2014 | グループワークユーザ |
 | group-c-2014 | group-c-2014 | group_c_2014 | 3306 | group_c_2014 | group_c_2014 | グループワークユーザ |
