@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
       vb.name = "treasure2014"
     end
     db.vm.provision :puppet, :options => '--modulepath="/vagrant/puppet/modules":"/vagrant/puppet/roles"' do |puppet|
-       puppet.manifests_path  = "puppet/manifests"
+       puppet.manifests_path  = ["vm","/vagrant/puppet/manifests"]
        puppet.manifest_file  = "app.pp"
     end
   end
