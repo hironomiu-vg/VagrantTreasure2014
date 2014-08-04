@@ -19,8 +19,17 @@ class base::install{
         'siege',
         'npm',
         'tree',
+        'cronie-noanacron',
         ]:
         ensure => installed,
+        require => Yumrepo['base-remi'],
+    }
+
+    package{
+        [
+        'cronie-anacron',
+        ]:
+        ensure => purged,
         require => Yumrepo['base-remi'],
     }
 }
