@@ -1,0 +1,3 @@
+[submodule "web-vuln-example"]
+	path = web-vuln-example
+	url = git@github.com:co3k/web-vuln-example.git
