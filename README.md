@@ -42,7 +42,7 @@ $ vagrant ssh
 ```
 ## users
 
-| OS user | pass | 続DB | 接続Port |  DB user |  DB pass | 用途 |
+| OS user | pass | 接続DB | 接続Port |  DB user |  DB pass | 用途 |
 |:-----------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 | root | - | - | 3306 |  root | vagrant | root vagrantユーザより sudo su -にて遷移|
 | vagrant | - | - | - | - | - | vagrant用ユーザ vagrant sshにてログイン|
